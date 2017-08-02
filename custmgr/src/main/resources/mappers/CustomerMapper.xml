@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.stu.custmgr.exec.CustomerDao">
+
+    <select id="findList" resultType="com.stu.custmgr.exec.Customer">
+        select
+            id AS "id",
+            cust_num AS "custNum",
+            pwd AS "pwd",
+            show_name AS "showName",
+            true_name AS "trueName",
+            register_time AS "registerTime"
+         from tb_customer
+         <where>
+             <if test="id !=null and id !=''">
+                 id = #{id}
+             </if>
+             <if test="custNum !=null and custNum !=''">
+                 AND cust_num = #{custNum}
+             </if>
+         </where>
+    </select>
+</mapper>

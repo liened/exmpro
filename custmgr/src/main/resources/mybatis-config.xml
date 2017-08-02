@@ -9,9 +9,9 @@
 
     <!-- 插件配置 -->
     <plugins>
-        <plugin interceptor="com.git.exm.pageutil.PagePlugin">
-            <property name="dealect" value="mysql"/>
-            <property name="pageSqlId" value=".*Page.*"/>
+        <plugin interceptor="com.stu.common.persistence.interceptor.PaginationInterceptor">
+            <!--<property name="dealect" value="mysql"/>-->
+            <!--<property name="pageSqlId" value=".*Page.*"/>-->
         </plugin>
     </plugins>
 

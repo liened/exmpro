@@ -1,23 +1,16 @@
-package com.stu.custmgr.vo;
+package com.stu.custmgr.exec;
+
+import com.stu.common.crud.BaseEntity;
 
 /**
  * Created by Administrator on 2017/8/1.
  */
-public class Customer {
-    private int id;
+public class Customer extends BaseEntity{
     private String custNum;
     private String pwd;
     private String showName;
     private String trueName;
     private String registerTime;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getCustNum() {
         return custNum;
@@ -62,7 +55,7 @@ public class Customer {
     @Override
     public String toString() {
         return "Customer{" +
-                "id=" + id +
+                "id=" + super.getId() +
                 ", custNum='" + custNum + '\'' +
                 ", pwd='" + pwd + '\'' +
                 ", showName='" + showName + '\'' +
