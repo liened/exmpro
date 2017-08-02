@@ -5,7 +5,7 @@ pwd VARCHAR(20),
 show_name VARCHAR(100),
 true_name VARCHAR(100),
 register_time VARCHAR(100),
-PRIMARY key (cust_id)
+PRIMARY key (id)
 ) charset=utf8 ENGINE = INNODB;
 
 
@@ -14,7 +14,7 @@ id int not null auto_increment,
 name VARCHAR(100),
 img_path VARCHAR(100),
 description VARCHAR(100),
-PRIMARY key (goods_id)
+PRIMARY key (id)
 ) charset=utf8 ENGINE = INNODB;
 
 
@@ -23,7 +23,7 @@ id int not null auto_increment,
 cust_num int,
 goods_id int,
 buy_num int,
-PRIMARY key (cart_id)
+PRIMARY key (id)
 ) charset=utf8 ENGINE = INNODB;
 
 
@@ -34,7 +34,7 @@ order_time varchar(20),
 total_money float,
 save_money float,
 state smallint,
-PRIMARY key (order_id)
+PRIMARY key (id)
 ) charset=utf8 ENGINE = INNODB;
 
 
@@ -46,12 +46,12 @@ order_num int,
 price float,
 money float,
 save_money float,
-PRIMARY key (order_detail_id)
+PRIMARY key (id)
 ) charset=utf8 ENGINE = INNODB;
 
 create table tb_store(
 id int not null auto_increment,
 goods_id int,
 store_num int,
-PRIMARY key (store_id)
+PRIMARY key (id)
 ) charset=utf8 ENGINE = INNODB;
