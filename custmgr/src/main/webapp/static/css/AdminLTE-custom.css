@@ -1,0 +1,248 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,SimSun,sans-serif;
+    color: #666;
+}
+
+/***layoyt begin*/
+.row{
+    margin-right: 0;
+    margin-left: 0;
+}
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    padding-right: 0;
+    padding-left: 0;
+}
+/***layoyt end*/
+
+.skin-blue .main-header .logo {
+    background-color: #3c8dbc;
+    color: #fff;
+    border-bottom: 0 solid transparent;
+}
+
+.content-header .breadcrumb{
+    padding: 0;
+    margin-bottom: 0;
+    list-style: none;
+    border-radius: 4px;
+    background: transparent;
+    text-align: left;
+}
+/** 面板 start **/
+.box {
+    position: relative;
+    border-radius: 0;
+    background: #ffffff;
+    border-top: 3px solid #fff;
+    margin-bottom: 20px;
+    width: 100%;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+/** 面板 end **/
+
+/** 表单 start **/
+.form-horizontal .form-group,
+.form-inline .form-group{
+    margin-right: 0;
+    margin-left: 0;
+    font-size: 12px;
+}
+.form-group{
+    margin-right: 0;
+    margin-left: 0;
+}
+.form-group {
+    margin-bottom: 24px;
+}
+.form-control{
+    height: 30px;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+}
+.form-horizontal .control-label,
+.form-horizontal .control-label-required{
+    padding-top: 7px;
+    margin-bottom: 0;
+    text-align: right;
+    font-weight: normal;
+}
+.form-inline .control-label,
+.form-inline .control-label-required{
+    padding-top: 0;
+    margin-bottom: 0;
+    text-align: right;
+    font-weight: normal;
+}
+.control-label:after,
+.control-label-required:after{
+    content: ":";
+    margin: 0 8px 0 2px;
+    position: relative;
+    top: -.5px;
+}
+.control-label-required:before {
+    display: inline-block;
+    margin-right: 4px;
+    content: "*";
+    font-family: SimSun;
+    font-size: 12px;
+    color: #dd4b39;
+}
+.form-group-with-help{
+    margin-bottom: 0;
+}
+.help-block {
+    display: block;
+    margin-top: 3px;
+    margin-bottom: 4px;
+    color: #737373;
+}
+/** 表单 end **/
+
+/*** 查询列表表格 **/
+.box-body .table {
+    /*margin-bottom: 0;*/
+    font-size: 12px;
+}
+
+table tr td{
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.page-header {
+    margin: 10px 0 20px 0;
+    font-size: 14px;
+}
+/*** 查询列表表格 **/
+
+/*** bootstrap-fileinput按钮 **/
+.btn-file,
+.fileinput-remove-button{
+    padding: 4px 12px;
+}
+/*** bootstrap-fileinput **/
+
+/*bootstrap-tagsinput 插件修改*/
+.bootstrap-tagsinput input {
+    display: none;
+}
+/*bootstrap-tagsinput 插件修改*/
+
+/**气泡确认框**/
+.popover{
+    border-radius:0;
+    font: inherit;
+}
+.popover-title {
+    background-color: inherit;
+    border-bottom: none;
+}
+/**气泡确认框**/
+
+/**easyUI**/
+.textbox .textbox-text{
+    height: 30px;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 0;
+}
+/*.tree{*/
+    /*border: 1px #d2d6de solid;*/
+/*}*/
+/**easyUI**/
+
+/**ant ui**/
+
+.transfer-list {
+    font-size: 12px;
+    border: 1px solid #d9d9d9;
+    display: inline-block;
+    border-radius: 6px;
+    vertical-align: middle;
+    position: relative;
+    height: 350px;
+    padding-top: 33px;
+    margin: 20px;
+}
+.transfer-list-header {
+    padding: 7px 15px;
+    border-radius: 6px 6px 0 0;
+    background: #fff;
+    color: #666;
+    border-bottom: 1px solid #e9e9e9;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.transfer-list-body {
+    font-size: 12px;
+    position: relative;
+    height: 100%;
+}
+.transfer-list-body-with-search {
+    padding-top: 34px;
+}
+.transfer-list-body-search-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 28px;
+    padding: 4px;
+    width: 100%;
+}
+.transfer-list-content {
+    height: 100%;
+    overflow: auto;
+    list-style: none;
+}
+.transfer-list-content-item {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 7px 15px;
+    min-height: 32px;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+.transfer-list-content-item:not(.transfer-list-content-item-disabled):hover {
+    cursor: pointer;
+    background-color: #eaf8fe;
+}
+article, aside, blockquote, body, button, code, dd, details, div, dl, dt, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, hr, input, legend, li, menu, nav, ol, p, pre, section, td, textarea, th, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/**ant ui**/
+
+
+.ajax-loading {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10000;
+    display: none;
+}
+.ajax-loading img{
+    margin: 100px auto;
+    display: block;
+}

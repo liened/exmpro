@@ -1,0 +1,107 @@
+/**Created by huangyaao on 2016-12-06.*/
+/**---------------------- 表格样式 start----------------------------**/
+.myTemplate_table{
+    width: 98%;
+    margin: auto;
+    font-size: 12px;
+}
+.myTemplate_table th{
+    padding: 8px
+}
+.myTemplate_table tr td{
+    padding: 8px;
+}
+.myTemplate_table a{
+    text-decoration: none;
+    color: #3c8dbc;
+    padding-right: 5px;
+}
+.myTemplate_border1{
+    border: 1px solid #f4f4f4;
+}
+.myTemplate_border2{
+    border-top: 1px solid #f4f4f4;
+}
+.myTemplate_border3{
+    border-bottom: 1px solid #f4f4f4;
+}
+.myTemplate_nowrap{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+/**---------------------- 表格样式 end----------------------------**/
+
+
+/**---------------------- 复选框 start----------------------------**/
+.chk_1 {
+    display: none;
+}
+.chk_1 + label {
+    background-color: #FFF;
+    border: 1px solid #C1CACA;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+    padding: 7px;
+    border-radius: 5px;
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    top: 2px;
+}
+.chk_1 + label:active {
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+.chk_1:checked + label {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1);
+    color: #243441;
+}
+
+.chk_1:checked + label:after {
+    position: absolute;
+    content: '\2714'; /*勾选符号*/
+    top: 0px;
+    left: 0px;
+    color: #758794;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    /*padding: 1px 0 0 0;*/
+    vertical-align: text-top;
+}
+/**---------------------- 复选框 end----------------------------**/
+
+/**---------------------- 分页样式 start----------------------------**/
+
+.myTemplate_pagination{
+    width: 98%;
+    margin: auto;
+    text-align: right;
+    padding: 1rem 0;
+    font-size: 1.2rem;
+}
+.myTemplate_pagination a{
+    /*background-color: #fafafa;*/
+    color: #666;
+    padding: 7px 12px;
+    line-height: 1.5;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    margin-left: -1px;
+}
+
+.myTemplate_pagination a:hover{
+    background-color:#fafafa;
+}
+.myTemplate_pagination a:active{
+    background-color: #337ab7;
+}
+
+.myTemplate_pagination_click{
+    color: #fff !important;
+    cursor: default;
+    background-color: #337ab7 !important;
+    border-color: #337ab7 !important;
+}
+
+/**---------------------- 分页样式 end----------------------------**/
