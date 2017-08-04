@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:task="http://www.springframework.org/schema/task"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-4.2.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd
+        http://www.springframework.org/schema/task
+        http://www.springframework.org/schema/task/spring-task-4.2.xsd">
+
+    <context:property-placeholder ignore-unresolvable="true" location="classpath:application.properties"/>
+    <!-- 扫描路径 -->
+    <context:component-scan base-package="com.stu">
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+
+    <context:component-scan base-package="com.stu"/>
+
+
+
+    <!-- 配置根视图 -->
+    <!--<mvc:view-controller path="/" view-name="index"/>-->
+
+    <!-- 激活基于注解的配置 -->
+    <mvc:annotation-driven/>
+
+    <mvc:default-servlet-handler/>
+
+    <!-- 静态资源配置 -->
+    <mvc:resources mapping="/static/**" location="/static/" cache-period="31536000"/>
+
+    <!-- 默认的视图解析器 -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="${web.view.prefix}"/>
+        <property name="suffix" value="${web.view.suffix}"/>
+    </bean>
+</beans>
