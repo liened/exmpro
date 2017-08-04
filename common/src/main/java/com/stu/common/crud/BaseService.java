@@ -18,12 +18,20 @@ public abstract class BaseService<D extends BaseDao,T extends BaseEntity>{
         return dao.save(t);
     }
 
+    public T getById(int id){
+        return (T)dao.getById(id);
+    }
+
     public T get(T t) {
         return (T) dao.get(t);
     }
 
     public int update(T t) {
         return dao.update(t);
+    }
+
+    public int deleteById(int id){
+        return dao.deleteById(id);
     }
 
     public int delete(T t) {
