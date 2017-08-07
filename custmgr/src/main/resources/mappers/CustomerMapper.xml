@@ -2,22 +2,78 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.stu.custmgr.exec.CustomerDao">
 
+    <sql id="custColums">
+        id AS "id",
+        cust_num AS "custNum",
+        pwd AS "pwd",
+        show_name AS "showName",
+        true_name AS "trueName",
+        register_time AS "registerTime"
+    </sql>
+
     <select id="findList" resultType="com.stu.custmgr.exec.Customer">
         select
-            id AS "id",
-            cust_num AS "custNum",
-            pwd AS "pwd",
-            show_name AS "showName",
-            true_name AS "trueName",
-            register_time AS "registerTime"
+          <include refid="custColums"/>
          from tb_customer
          <where>
-             <if test="id !=null and id !=''">
-                 id = #{id}
-             </if>
              <if test="custNum !=null and custNum !=''">
-                 AND cust_num = #{custNum}
+                 cust_num = #{custNum}
+             </if>
+             <if test="showName !=null and showName !=''">
+                 AND show_name LIKE CONCAT('%',#{showName},'%')
+             </if>
+             <if test="trueName !=null and trueName !=''">
+                 AND true_name LIKE CONCAT('%',#{trueName},'%')
              </if>
          </where>
+        order by id desc
+    </select>
+
+    <insert id="save" parameterType="com.stu.custmgr.exec.Customer">
+        INSERT into tb_customer(
+          cust_num,
+          pwd,
+          show_name,
+          true_name,
+          register_time
+        ) values
+        (
+          #{custNum},
+          #{pwd},
+          #{showName},
+          #{trueName},
+          now()
+        )
+    </insert>
+    
+    <update id="update" parameterType="com.stu.custmgr.exec.Customer">
+        UPDATE tb_customer
+        <set>
+            <if test="custNum != null and custNum != ''">
+                cust_num = #{custNum},
+            </if>
+            <if test="pwd != null and pwd != ''">
+                pwd = #{pwd},
+            </if>
+            <if test="showName != null and showName != ''">
+                show_name = #{showName},
+            </if>
+            <if test="trueName != null and trueName != ''">
+                true_name = #{trueName},
+            </if>
+        </set>
+        WHERE id = #{id}
+    </update>
+
+    <delete id="deleteById">
+        DELETE FROM tb_customer where id = #{id}
+    </delete>
+
+    <select id="getById" resultType="com.stu.custmgr.exec.Customer">
+        SELECT
+          <include refid="custColums"/>
+        FROM
+          tb_customer
+        WHERE id = #{id}
     </select>
 </mapper>

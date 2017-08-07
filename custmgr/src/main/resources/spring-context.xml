@@ -58,7 +58,7 @@
 
     <bean id="mapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="basePackage" value="com.stu"/>
-        <property name="annotationClass" value="com.stu.common.crud.ExmDao"/>
+        <property name="annotationClass" value="com.stu.common.crud.CrudDao"/>
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
     </bean>
 
