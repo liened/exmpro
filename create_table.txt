@@ -4,7 +4,7 @@ cust_num VARCHAR(20),
 pwd VARCHAR(20),
 show_name VARCHAR(100),
 true_name VARCHAR(100),
-register_time VARCHAR(100),
+register_time datetime,
 PRIMARY key (id)
 ) charset=utf8 ENGINE = INNODB;
 
