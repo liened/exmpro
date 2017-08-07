@@ -2,16 +2,27 @@ package com.stu.common.utils;
 
 public class Result {
 
-    private String statue = "200";
+    private String status;
     private String message;
     private Object object;
 
-    public String getStatue() {
-        return statue;
+    public Result(String status,String message){
+        this.status = status;
+        this.message = message;
     }
 
-    public void setStatue(String statue) {
-        this.statue = statue;
+    public Result(String status,String message,Object obj){
+        this.status = status;
+        this.message = message;
+        this.object = obj;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public String getMessage() {
