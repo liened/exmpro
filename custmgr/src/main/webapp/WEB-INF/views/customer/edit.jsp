@@ -11,26 +11,26 @@
             </div>
             <div class="modal-body">
                 <form id="editForm" class="form-horizontal">
-                    <input type="hidden" name="id" value="${cust.id}">
+                    <input type="hidden" name="id" value="${id}">
                     <div class="box-body">
                         <div class="form-group">
                             <label for="custNum" class="col-sm-2 control-label-required">custNum</label>
                             <div class="col-sm-4">
-                                <input type="text" class="form-control" id="custNum" name="custNum" value="${Customer.custName}" required>
+                                <input type="text" class="form-control" id="custNum" name="custNum" value="${custName}" required>
                             </div>
                             <label for="pwd" class="col-sm-2 control-label-required">pwd</label>
                             <div class="col-sm-4">
-                                <input type="password" class="form-control" id="pwd" name="pwd" value="${cust.pwd}" required>
+                                <input type="text" class="form-control" id="pwd" name="pwd" value="${pwd}" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="showName" class="col-sm-2 control-label-required">showName</label>
                             <div class="col-sm-4">
-                                <input type="text" class="form-control" id="showName" name="showName" value="${cust.showName}" required/>
+                                <input type="text" class="form-control" id="showName" name="showName" value="${showName}" required/>
                             </div>
                             <label for="trueName" class="col-sm-2 control-label-required">trueName</label>
                             <div class="col-sm-4">
-                                <input type="text" class="form-control" id="trueName" name="trueName" value="${cust.trueName}" required/>
+                                <input type="text" class="form-control" id="trueName" name="trueName" value="${trueName}" required/>
                             </div>
                         </div>
                         <div class="form-group">
@@ -56,6 +56,7 @@
                     $('#editModal').modal('hide');
                     $('.btn-qry').click();
                 });
+                console.log("-- end --");
             }
         });
     });

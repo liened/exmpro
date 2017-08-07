@@ -56,8 +56,8 @@
     </div>
 </section>
 <%@include file="add.jsp"%>
-<%@include file="detail.jsp"%>
 <%@include file="edit.jsp"%>
+<%@include file="detail.jsp"%>
 <script>
     $(function () {
         // 查询按钮绑定事件
