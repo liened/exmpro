@@ -5,7 +5,7 @@ import com.stu.common.crud.BaseEntity;
 /**
  * Created by Administrator on 2017/8/1.
  */
-public class Customer extends BaseEntity{
+public class Customer extends BaseEntity<Customer>{
     private String custNum;
     private String pwd;
     private String showName;
