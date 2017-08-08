@@ -26,7 +26,3 @@
 <script src="${ctx}/static/js/common.js"></script>
 <script src="${ctx}/static/js/pclient.js"></script>
 <script src="${ctx}/static/AdminLTE/dist/js/app.js"></script>
-<%--<script src="${ctx}/static/module/common.js"></script>--%>
-<%--<script src="${ctx}/static/module/widget/pageList.js"></script>--%>
-<%--<script src="${ctx}/static/module/widget/tree.js"></script>--%>
-
