@@ -70,11 +70,7 @@
         <section class="sidebar" style="height: auto;">
             <ul class="sidebar-menu">
                 <li class="header">主菜单</li>
-                <li class="active">
-                    <a href="#" data-action="/custmgr/index">
-                        <i class="fa fa-home"></i> <span>测试用例</span>
-                    </a>
-                </li>
+                ${fns:getMenuListStr()}
             </ul>
         </section>
     </aside>
