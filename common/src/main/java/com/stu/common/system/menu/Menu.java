@@ -1,6 +1,9 @@
 package com.stu.common.system.menu;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.stu.common.crud.BaseEntity;
+
+import java.util.List;
 
 public class Menu extends BaseEntity<Menu>{
 
@@ -66,6 +69,27 @@ public class Menu extends BaseEntity<Menu>{
 
     public void setIsValue(String isValue) {
         this.isValue = isValue;
+    }
+
+
+    @JsonIgnore
+    public static void sortList(List<Menu> list, List<Menu> sourcelist, String parentCd, boolean cascade){
+        for (int i=0; i<sourcelist.size(); i++){
+            Menu e = sourcelist.get(i);
+            if (e.getParentCd()!=null && e.getParentCd().equals(parentCd)){
+                list.add(e);
+                if (cascade){
+                    // 判断是否还有子节点, 有则继续获取子节点
+                    for (int j=0; j<sourcelist.size(); j++){
+                        Menu child = sourcelist.get(j);
+                        if (child.getParentCd()!=null && child.getParentCd().equals(e.getMenuCd())){
+                            sortList(list, sourcelist, e.getMenuCd(), true);
+                            break;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     @Override
