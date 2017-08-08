@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.stu.common.system.menu.MenuDao">
+
+    <sql id="menuColums">
+         id AS "id"
+        ,menu_cd AS "menuCd"
+        ,menu_name AS "menuName"
+        ,url AS "url"
+        ,parent_cd AS "parentCd"
+        ,sort AS "sort"
+        ,icon AS "icon"
+        ,is_value AS "isValue"
+        ,create_time AS "createTime"
+        ,crearor AS "crearor"
+        ,update_time AS "updateTime"
+        ,updator AS "updator"
+    </sql>
+
+    <select id="findList" resultType="com.stu.common.system.menu.Menu">
+        SELECT
+          <include refid="menuColums"/>
+        FROM tb_menu
+        WHERE is_value = '1'
+        ORDER BY sort
+    </select>
+
+
+</mapper>

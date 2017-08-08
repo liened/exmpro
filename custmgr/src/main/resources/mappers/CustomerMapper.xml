@@ -3,12 +3,12 @@
 <mapper namespace="com.stu.custmgr.exec.CustomerDao">
 
     <sql id="custColums">
-        id AS "id",
-        cust_num AS "custNum",
-        pwd AS "pwd",
-        show_name AS "showName",
-        true_name AS "trueName",
-        register_time AS "registerTime"
+         id AS "id"
+        ,cust_num AS "custNum"
+        ,pwd AS "pwd"
+        ,show_name AS "showName"
+        ,true_name AS "trueName"
+        ,register_time AS "registerTime"
     </sql>
 
     <select id="findList" resultType="com.stu.custmgr.exec.Customer">
