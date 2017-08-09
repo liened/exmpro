@@ -20,7 +20,7 @@
                         <td nowrap>${item.trueName}</td>
                         <td nowrap>${item.registerTime}</td>
                         <td nowrap>
-                            <a href="javascript:;" class="btn-operaton" data-toggle="modal" data-target="#editModal" data-id="${item.id}">修改</a>
+                            <a href="javascript:;" class="btn-edit" data-toggle="modal" data-target="#editModal" data-id="${item.id}">修改</a>
                             <a href="javascript:;" class="btn-delete" data-toggle="modal" data-backdrop="false" data-target="_content" data-id="${item.id}">删除</a>
                         </td>
                     </tr>
@@ -32,13 +32,14 @@
 </div>
 <script>
     $(function () {
-        $('.btn-operaton').on('click', function () {
+        // 修改操作
+        $('.btn-edit').on('click', function () {
             var $this = $(this);
             $.pclient.post2SRV(baseUrl + '/custmgr/get', { id: $this.data('id') }, null, function (data) {
-                var formData = data;
-                $('#editForm').form('load', formData);
+                var source   = $("#edit-template").html();
+                var template = Handlebars.compile(source);
+                $('#editModal').html(template(data));
             });
-
         });
 
         $('.btn-delete').on('click', function () {
