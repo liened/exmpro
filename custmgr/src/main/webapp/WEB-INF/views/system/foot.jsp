@@ -4,8 +4,8 @@
 <script src="${ctx}/static/vendor/bootstrap-tagsinput/bootstrap-tagsinput.min.js"></script>
 <script src="${ctx}/static/AdminLTE/plugins/datepicker/bootstrap-datepicker.js"></script>
 <script src="${ctx}/static/AdminLTE/plugins/datepicker/locales/bootstrap-datepicker.zh-CN.js"></script>
-<script src="${ctx}/static/vendor/jquery-easyui/jquery.easyui.min.js"></script>
-<script src="${ctx}/static/vendor/jquery-easyui/jquery.easyui.extend.js"></script>
+<%--<script src="${ctx}/static/vendor/jquery-easyui/jquery.easyui.min.js"></script>--%>
+<%--<script src="${ctx}/static/vendor/jquery-easyui/jquery.easyui.extend.js"></script>--%>
 <script src="${ctx}/static/vendor/jquery-validation/jquery.validate.min.js"></script>
 <script src="${ctx}/static/vendor/jquery-validation/localization/messages_zh.min.js"></script>
 <script src="${ctx}/static/vendor/jquery-simplePagination/jquery.simplePagination.js"></script>
