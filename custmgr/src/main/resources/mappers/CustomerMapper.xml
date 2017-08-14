@@ -11,6 +11,8 @@
         ,register_time AS "registerTime"
     </sql>
 
+    <cache type="org.mybatis.caches.ehcache.EhcacheCache"/>
+
     <select id="findList" resultType="com.stu.custmgr.exec.Customer">
         select
           <include refid="custColums"/>

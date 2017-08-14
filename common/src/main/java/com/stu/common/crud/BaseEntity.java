@@ -2,7 +2,9 @@ package com.stu.common.crud;
 
 import com.stu.common.persistence.Page;
 
-public class BaseEntity<T> {
+import java.io.Serializable;
+
+public class BaseEntity<T> implements Serializable{
 
     private int id;
 
