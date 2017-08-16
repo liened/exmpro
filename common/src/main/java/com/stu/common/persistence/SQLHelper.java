@@ -1,9 +1,8 @@
 /**
  * Copyright &copy; 2012-2016 <a href="https://github.com/thinkgem/jeesite">JeeSite</a> All rights reserved.
  */
-package com.stu.common.persistence.interceptor;
+package com.stu.common.persistence;
 
-import com.stu.common.persistence.Page;
 import com.stu.common.persistence.dialect.Dialect;
 import com.stu.common.utils.Reflections;
 import org.apache.commons.lang3.StringUtils;

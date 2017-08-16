@@ -1,4 +1,4 @@
-package com.stu.common.system.utils;
+package com.stu.common.utils.system;
 
 import com.stu.common.system.menu.Menu;
 import com.stu.common.system.menu.MenuDao;
