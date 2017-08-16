@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:p="http://www.springframework.org/schema/p"
        xmlns:context="http://www.springframework.org/schema/context"
        xmlns:mvc="http://www.springframework.org/schema/mvc"
-       xmlns:task="http://www.springframework.org/schema/task"
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context-4.2.xsd
         http://www.springframework.org/schema/mvc
-        http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd
-        http://www.springframework.org/schema/task
-        http://www.springframework.org/schema/task/spring-task-4.2.xsd">
+        http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd">
 
     <context:property-placeholder ignore-unresolvable="true" location="classpath:application.properties"/>
     <!-- 扫描路径 -->
@@ -24,6 +20,23 @@
     <context:component-scan base-package="com.stu"/>
 
 
+    <!-- 拦截器配置，拦截顺序：先执行后定义的，排在第一位的最后执行。-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**" />
+            <mvc:exclude-mapping path="/"/>
+            <mvc:exclude-mapping path="/login"/>
+            <mvc:exclude-mapping path="/sys/menu/tree"/>
+            <mvc:exclude-mapping path="/sys/menu/treeData"/>
+            <bean class="com.stu.common.interceptor.LogInterceptor" />
+        </mvc:interceptor>
+        <!-- 手机视图拦截器
+        <mvc:interceptor>
+            <mvc:mapping path="/**" />
+            <bean class="com.sss.sss.modules.sys.interceptor.MobileInterceptor" />
+        </mvc:interceptor>
+        -->
+    </mvc:interceptors>
 
     <!-- 配置根视图 -->
     <!--<mvc:view-controller path="/" view-name="index"/>-->
