@@ -3,7 +3,7 @@
         xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd">
 
     <defaultCache overflowToDisk="true" eternal="false" maxElementsInMemory="1"/>
-    <diskStore path="D:/myaap/cache"/>
+    <diskStore path="D:/myapp/cache"/>
 
 
 </ehcache>
