@@ -50,7 +50,7 @@
             </props>
         </property>
         <!-- 设置日志输出级别，不定义则默认不输出警告等错误日志信息 -->
-        <!--<property name="warnLogCategory" value="WARN" />-->
+        <property name="warnLogCategory" value="WARN" />
         <!-- 默认HTTP状态码 -->
     </bean>
 </beans>
