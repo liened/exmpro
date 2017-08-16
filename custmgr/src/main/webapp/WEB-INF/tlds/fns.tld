@@ -14,7 +14,7 @@
     <function>
         <description>获取拼装好样式的菜单列表</description>
         <name>getMenuListStr</name>
-        <function-class>com.stu.common.system.utils.UserUtils</function-class>
+        <function-class>com.stu.common.utils.system.UserUtils</function-class>
         <function-signature>java.lang.String getMemuListStr()</function-signature>
         <example>${fns:getMemuListStr()}</example>
     </function>
@@ -22,7 +22,7 @@
     <function>
         <description>获取菜单数据</description>
         <name>getMenuList</name>
-        <function-class>com.stu.common.system.utils.UserUtils</function-class>
+        <function-class>com.stu.common.utils.system.UserUtils</function-class>
         <function-signature>java.util.List getMenuList()</function-signature>
         <example>${fns:getMenuList()}</example>
     </function>
