@@ -8,6 +8,7 @@ import java.text.SimpleDateFormat;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.stu.common.utils.Exceptions;
 import com.stu.common.utils.system.DateUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -50,6 +51,11 @@ public class LogInterceptor implements HandlerInterceptor {
 	@Override
 	public void afterCompletion(HttpServletRequest request, HttpServletResponse response, 
 			Object handler, Exception ex) throws Exception {
+
+		Throwable throwable = Exceptions.getThrowable(request);
+		if (throwable != null){
+			logger.error(throwable.getMessage(), throwable);
+		}
 
 		// 保存日志
 //		LogUtils.saveLog(request, handler, ex, null);
