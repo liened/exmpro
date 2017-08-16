@@ -9,7 +9,7 @@
 
     <!-- 插件配置 -->
     <plugins>
-        <plugin interceptor="com.stu.common.persistence.interceptor.PaginationInterceptor">
+        <plugin interceptor="com.stu.common.interceptor.page.PaginationInterceptor">
             <!--<property name="dealect" value="mysql"/>-->
             <!--<property name="pageSqlId" value=".*Page.*"/>-->
         </plugin>
