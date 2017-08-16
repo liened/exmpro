@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class LoginController {
-    @RequestMapping("/")
+    @RequestMapping("/system")
     public String index(){
         return "/system/index";
     }
