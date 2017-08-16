@@ -41,4 +41,16 @@
         <property name="prefix" value="${web.view.prefix}"/>
         <property name="suffix" value="${web.view.suffix}"/>
     </bean>
+
+    <bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+        <property name="exceptionMappings">
+            <props>
+                <prop key="org.apache.shiro.authz.UnauthorizedException">errors/403</prop>
+                <prop key="java.lang.Throwable">errors/500</prop>
+            </props>
+        </property>
+        <!-- 设置日志输出级别，不定义则默认不输出警告等错误日志信息 -->
+        <!--<property name="warnLogCategory" value="WARN" />-->
+        <!-- 默认HTTP状态码 -->
+    </bean>
 </beans>
